@@ -1,5 +1,7 @@
 # About
 
+You can see the project [here](https://ajo01.github.io/plastic-pollution.github.io/)
+
 This is a re-creation of a section of Jamie Kettle's Who is bottling plastic waste pollution? graphic design with D3.js. It explores which countries in 2010 produced the largest amounts of plastic waste, what percentage of this was inadequately managed, and how this management correlates to GDP per capita.
 
 The countries are ordered in descending order by plastic waste generated per year. The bar chart displays the share of plastic inadequately managed and the area chart on the far right demonstrates GDP per capita. The color groups countries by region.
