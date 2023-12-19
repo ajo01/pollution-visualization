@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <h1>Who is bottling plastic waste pollution?</h1>
+    <div class="line"></div>
+    <div class="description">
+      This is re-creation of a section of Jamie Kettle's
+      <span>Who is bottling plastic waste pollution?</span> graphic design with
+      D3.js. It explores which countries in 2010 produced the largest amounts of
+      plastic waste and what percentage of this was inadequately managed, and
+      how this management correlates to GDP per capita.
+    </div>
+    <div class="description">
+      The countries are ordered in descending order by plastic waste generated
+      per year. The bar chart displays the share of plastic inadequately managed
+      and the area chart on the far right demonstrates GDP per capita. The color
+      groups countries by region.
+    </div>
+    <div class="line"></div>
+    <div class="container">
+      <div id="vis"></div>
+      <div id="area"></div>
+    </div>
+  </body>
+  <script src="js/d3.v6.min.js"></script>
+  <script src="js/main.js"></script>
+  <script src="js/barchart.js"></script>
+  <script src="js/areachart.js"></script>
+</html>
