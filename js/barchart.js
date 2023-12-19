@@ -14,6 +14,7 @@ class BarChart {
         bottom: 100,
         left: 200,
       },
+      tooltipPadding: 15,
     };
     this.data = data;
     this.initVis();
@@ -24,7 +25,7 @@ class BarChart {
     let vis = this;
 
     vis.data = vis.data.sort(function (a, b) {
-      return a["Plastic_Waste"] - b["Plastic_Waste"];
+      return b["Plastic_Waste"] - a["Plastic_Waste"];
     });
 
     vis.width =
@@ -52,7 +53,7 @@ class BarChart {
       );
 
     vis.xScale = d3.scaleLinear().range([0, vis.width]);
-    vis.yScale = d3.scaleBand().range([vis.height, 0]).padding(0.2);
+    vis.yScale = d3.scaleBand().range([0, vis.height]).padding(0.2);
 
     vis.yAxis = d3
       .axisLeft(vis.yScale)
@@ -166,6 +167,30 @@ class BarChart {
       })
       .style("text-anchor", "middle")
       .style("font-size", "10px");
+
+    const handleTooltip = (el) =>
+      el.each(function (d, i) {
+        d3.select(this)
+          .on("mouseover", (event, d) => {
+            d3
+              .select("#tooltip")
+              .style("display", "block")
+              .style("left", event.pageX + vis.config.tooltipPadding + "px")
+              .style("top", event.pageY + vis.config.tooltipPadding + "px")
+              .html(`
+              <div>${d.Country}</div>
+            <div>${numberWithCommas(
+              Math.round(d.Plastic_Waste / 100)
+            )} tonnes of plastic waste generated / day</div>
+            <div class="tooltip-cost">Rank ${i + 1}/105</div>
+          `);
+          })
+          .on("mouseleave", () => {
+            d3.select("#tooltip").style("display", "none");
+          });
+      });
+    handleTooltip(vis.barShadows);
+    handleTooltip(vis.bar);
 
     vis.xAxisG.call(vis.xAxis);
     vis.xAxisTopG.call(vis.xAxisTop);

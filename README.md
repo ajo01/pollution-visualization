@@ -16,5 +16,5 @@ Through this project, I discovered that the original design did not reflect the 
 Plastic waste inputs from land into the ocean
 https://www.science.org/doi/10.1126/science.1260352
 
-GDP By Country 1999 - 2022
-https://www.kaggle.com/datasets/alejopaullier/-gdp-by-country-1999-2022/
+GDP Per Capita - World Bank
+https://ourworldindata.org/grapher/gdp-per-capita-worldbank

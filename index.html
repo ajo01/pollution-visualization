@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>Plastic Pollution</title>
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
@@ -11,10 +11,16 @@
     <div class="line"></div>
     <div class="description">
       This is a re-creation of a section of Jamie Kettle's
-      <span>Who is bottling plastic waste pollution?</span> graphic design with
-      D3.js. It explores which countries in 2010 produced the largest amounts of
-      plastic waste, what percentage of this was inadequately managed, and how
-      this management correlates to GDP per capita.
+      <span
+        ><a
+          href="https://www.behance.net/gallery/106936329/Plastic-Waste-Pollution-data-visualisation"
+          >Who is bottling plastic waste pollution?</a
+        ></span
+      >
+      graphic design with D3.js. It explores which countries in 2010 produced
+      the largest amounts of plastic waste and what percentage of this was
+      inadequately managed, and how this management correlates to GDP per
+      capita.
     </div>
     <div class="description">
       The countries are ordered in descending order by plastic waste generated
@@ -27,6 +33,7 @@
       <div id="vis"></div>
       <div id="area"></div>
     </div>
+    <div id="tooltip"></div>
   </body>
   <script src="js/d3.v6.min.js"></script>
   <script src="js/main.js"></script>

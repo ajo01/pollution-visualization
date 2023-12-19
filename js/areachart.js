@@ -14,6 +14,7 @@ class AreaChart {
         bottom: 100,
         left: 80,
       },
+      tooltipPadding: 10,
     };
     this.data = data;
     this.initVis();
@@ -26,8 +27,6 @@ class AreaChart {
     vis.data = vis.data.sort(function (a, b) {
       return a["Plastic_Waste"] - b["Plastic_Waste"];
     });
-
-    console.log(vis.data);
 
     vis.width =
       vis.config.containerWidth -
@@ -78,7 +77,7 @@ class AreaChart {
     let vis = this;
 
     vis.yScale.domain(vis.data.map((d) => d.Country));
-    vis.radiusScale.domain([0, d3.max(vis.data, (d) => d["2015"])]);
+    vis.radiusScale.domain([0, d3.max(vis.data, (d) => d.GDP)]);
 
     vis.renderVis();
   }
@@ -108,6 +107,21 @@ class AreaChart {
       .attr("class", (d) => `point ${colorClass(d.Region)}`)
       .attr("cx", 0)
       .attr("cy", (d) => vis.yScale(d.Country) + vis.yScale.bandwidth() / 2)
-      .attr("r", (d) => vis.radiusScale(d["2015"]));
+      .attr("r", (d) => vis.radiusScale(d.GDP));
+
+    vis.circle
+      .on("mouseover", (event, d) => {
+        d3
+          .select("#tooltip")
+          .style("display", "block")
+          .style("left", event.pageX + vis.config.tooltipPadding + "px")
+          .style("top", event.pageY + vis.config.tooltipPadding + "px").html(`
+        <div>${d.Country}</div>
+        <div>Total GDP: $${numberWithCommas(Math.round(d.GDP))} billions</div>
+      `);
+      })
+      .on("mouseleave", () => {
+        d3.select("#tooltip").style("display", "none");
+      });
   }
 }
