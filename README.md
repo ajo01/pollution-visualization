@@ -8,8 +8,8 @@ The countries are ordered in descending order by plastic waste generated per yea
 
 Through this project, I discovered that the original design did not reflect the actual data. This explains some of the discrepancies between the original and this visualization. For example, in Jamie Kettle's design, China was reportedly the #1 contributor of plastic waste with 59.1 million tonnes generated per year. However, in the dataset China actually generated 31.6 million tonnes.
 
-<img width="1415" alt="Screenshot 2023-12-19 at 12 52 53 AM" src="https://github.com/ajo01/pollution-visualization/assets/70789275/de7554ea-a090-411c-9a16-d918f620b785">
-<img width="976" alt="Screenshot 2023-12-19 at 12 53 01 AM" src="https://github.com/ajo01/pollution-visualization/assets/70789275/1617f959-1d62-49ad-b393-e27029c49516">
+
+<img width="653" alt="pollution2" src="https://github.com/ajo01/pollution-visualization/assets/70789275/ea1a6e5e-0aee-45fa-a883-f874b1fd0150">
 
 
 
