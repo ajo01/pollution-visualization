@@ -7,9 +7,10 @@ This is a re-creation of a section of Jamie Kettle's Who is bottling plastic was
 The countries are ordered in descending order by plastic waste generated per year. The bar chart displays the share of plastic inadequately managed and the area chart on the far right demonstrates GDP per capita. The color groups countries by region.
 
 Through this project, I discovered that the original design did not reflect the actual data. This explains some of the discrepancies between the original and this visualization. For example, in Jamie Kettle's design, China was reportedly the #1 contributor of plastic waste with 59.1 million tonnes generated per year. However, in the dataset China actually generated 31.6 million tonnes.
+<img width="818" alt="Screenshot 2023-12-24 at 8 52 55 PM" src="https://github.com/ajo01/pollution-visualization/assets/70789275/e9d1f1b9-f572-4023-9205-06d5e684945c">
 
+<img width="773" alt="Screenshot 2023-12-24 at 8 53 07 PM" src="https://github.com/ajo01/pollution-visualization/assets/70789275/460bf018-d736-4ed6-9623-d5a7e672cda8">
 
-<img width="653" alt="pollution2" src="https://github.com/ajo01/pollution-visualization/assets/70789275/ea1a6e5e-0aee-45fa-a883-f874b1fd0150">
 
 
 
